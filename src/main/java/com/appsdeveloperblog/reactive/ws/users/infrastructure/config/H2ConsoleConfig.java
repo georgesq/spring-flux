@@ -12,13 +12,13 @@ import java.sql.SQLException;
 @Configuration
 //@Profile({"dev","test"})
 @Profile("!prod & !production")
-public class H2ConsoleConfiguration {
+public class H2ConsoleConfig {
 
     private Server webServer;
 
     @EventListener(ApplicationStartedEvent.class)
     public void start() throws SQLException {
-        String WEB_PORT = "8089";
+        String WEB_PORT = "8082";
         this.webServer = Server.createWebServer("-webPort", WEB_PORT).start();
     }
 
