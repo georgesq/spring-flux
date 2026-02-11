@@ -18,7 +18,7 @@ public class H2ConsoleConfiguration {
 
     @EventListener(ApplicationStartedEvent.class)
     public void start() throws SQLException {
-        String WEB_PORT = "8089";
+        String WEB_PORT = "8082";
         this.webServer = Server.createWebServer("-webPort", WEB_PORT).start();
     }
 
